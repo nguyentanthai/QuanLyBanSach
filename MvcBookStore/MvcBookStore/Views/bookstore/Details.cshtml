@@ -1,0 +1,47 @@
+﻿
+
+<style type="text/css">
+    #datmua a {
+        clear: both;
+        background:red;
+        color:white;
+        width:120px;
+        height:35px;
+        display:block;
+        float:right;
+        text-align:center;
+        padding-top:10px;
+        text-decoration:none;
+        font-weight:bold;
+    }
+    #datmua a:hover {
+        background-color:gray;
+        color:red;
+    }
+</style>
+       
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h3>THONG TIN CHI TIET SACH</h3>
+<div>
+    <div style="width:40% ; float:left ; border-left: dotted 1px ; border-color:azure">
+        <img src="~/Hinhsanpham/@Model.Anhbia" width="100%" />
+
+    </div>
+    <div style="width:60%; float:left; padding:10px">
+        <h4 style="font-weight:bold;color:red">Ten sach: @Model.Tensach</h4>
+        <p style="text-align:justify"><span style="font-weight:bold">Mo ta</span>@Model.Mota</p>
+        <p style="font-weight:bold">Gia ban <span style="color:red ; font-size:16pt">@Model.Giaban vnd</span></p>
+    </div>
+    <div>
+        <div id="datmua">
+            <a href="@Url.Action("AddToCard" , "ShoppingCard" , new { id = Model.Masach })" class="list-group-item">
+                DAT MUA
+            </a>
+        </div>
+    </div>
+</div>

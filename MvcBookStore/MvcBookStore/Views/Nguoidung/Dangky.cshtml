@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Dangky";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<table align="center">
+    <h2 style="text-align:center">DANG KY THANH VIEN</h2>
+    @using( Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+        <tr style="height:40px">
+            <td>Ho ten khach hang: </td>
+            <td>@Html.TextBox("HotenKH")@ViewData["loi1"]</td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>Ten dang nhap</td>
+            <td>
+                @Html.TextBox("TenDN")
+                @ViewData["loi2"]
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>Mat khau: </td>
+            <td>
+                @Html.Password("Matkhau")
+                @ViewData["loi3"]
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>Mat khau nhatr lai</td>
+            <td>
+                @Html.Password("Matkhaunhatrlai")
+                @ViewData["loi4"]
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td>Ngay sinh :</td>
+            <td>
+                <input type="date" name="Ngaysinh" />
+            </td>
+        </tr>
+
+        <tr style="height:40px">
+            <td></td>
+            <td>
+                <input type="submit" value="Dang ky" />
+            </td>
+        </tr>
+            }
+</table>
+
